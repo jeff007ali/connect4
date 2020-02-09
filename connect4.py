@@ -98,7 +98,7 @@ turn = 0
 
 pygame.init()
 
-SQUARE_SIZE = 100
+SQUARE_SIZE = 80 # Change game over text size also
 width = COLUMN_COUNT * SQUARE_SIZE
 height = (ROW_COUNT + 1) * SQUARE_SIZE
 size = (width, height)
@@ -106,9 +106,10 @@ size = (width, height)
 RADIUS = int(SQUARE_SIZE/2 - 5)
 
 screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Connect4 by jeff007ali")
 draw_board(board)
 
-game_over_font = pygame.font.SysFont("monospace", 75)
+game_over_font = pygame.font.SysFont("monospace", 55)
 
 while running:
     for event in pygame.event.get():
