@@ -162,3 +162,9 @@ while running:
 
             if running == False:
                 pygame.time.wait(3000)
+
+                board = create_board()
+                pygame.draw.rect(screen, BLACK, (0, 0, width, SQUARE_SIZE))
+                draw_board(board)
+
+                running = True
